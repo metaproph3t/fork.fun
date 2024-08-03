@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto+Mono:wght@400;700&display=swap');
+
+:root {
+    --neon-pink: #ff00ff;
+    --neon-blue: #00ffff;
+    --neon-green: #00ff00;
+    --dark-bg: #121212;
+}
+
+body {
+    font-family: 'Roboto Mono', monospace;
+    background-color: var(--dark-bg);
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.logo img {
+    height: 50px;
+}
+
+/* Update the existing nav styles */
+nav ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 2rem; /* Increased from 1rem */
+}
+
+nav ul li a {
+    color: var(--neon-blue);
+    text-decoration: none;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.8rem;
+    padding: 0.5rem 1rem; /* Added padding */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* Add hover effect */
+nav ul li a:hover {
+    background-color: rgba(0, 255, 255, 0.2); /* Slight background on hover */
+    box-shadow: 0 0 10px var(--neon-blue); /* Neon glow effect on hover */
+}
+
+.hero {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('confetti.gif') repeat;
+}
+
+h1 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 3rem;
+    text-align: center;
+    color: var(--neon-pink);
+    text-shadow: 0 0 10px var(--neon-pink);
+}
+
+.content {
+    margin-top: -10vh;
+}
+
+.content .section {
+    display: flex;
+    align-items: center;
+    padding: 3rem 2rem;
+}
+
+.content .section.reverse {
+    flex-direction: row-reverse;
+}
+
+.content .image, .content .text {
+    flex: 1;
+}
+
+.content .image img {
+    max-width: 100%;
+}
+
+.content h2 {
+    font-family: 'Press Start 2P', cursive;
+    color: var(--neon-green);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.content p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1rem;
+    text-align: center;
+}
+
+.social-links {
+    margin-bottom: 1rem;
+}
+
+.social-icon {
+    font-size: 2rem;
+    margin: 0 0.5rem;
+    text-decoration: none;
+}
+
+.disclaimer {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+@keyframes fall {
+    0% { transform: translateY(-10vh) rotate(0deg); }
+    100% { transform: translateY(110vh) rotate(720deg); }
+}
+
+.confetti {
+    position: fixed;
+    top: -10vh;
+    font-size: 1.5rem;
+    pointer-events: none;
+    animation: fall linear forwards;
+}
+
+.content .image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.content .image img {
+    max-width: 100%;
+    max-height: 300px;
+    transition: transform 0.3s ease;
+}
+
+.content .image img:hover {
+    transform: rotate(360deg);
+}
