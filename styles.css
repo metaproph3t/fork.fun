@@ -23,6 +23,23 @@ header {
     background-color: rgba(0, 0, 0, 0.5);
 }
 
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-image {
+    height: 50px; /* Adjust as needed */
+    margin-right: 10px; /* Space between logo and text */
+}
+
+.logo-text {
+    font-family: 'Press Start 2P', cursive; /* Or any font you prefer */
+    font-size: 1.5rem; /* Adjust as needed */
+    color: var(--neon-blue); /* Use your preferred color */
+    text-shadow: 0 0 5px var(--neon-blue); /* Optional: adds a glow effect */
+}
+
 .logo img {
     height: 50px;
 }
@@ -153,4 +170,57 @@ footer {
 
 .content .image img:hover {
     transform: rotate(360deg);
+}
+
+.waitlist {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.waitlist-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.waitlist h2 {
+    font-family: 'Press Start 2P', cursive;
+    color: var(--neon-green);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.waitlist p {
+    color: #fff;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+.waitlist-button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-family: 'Press Start 2P', cursive;
+    background-color: var(--neon-pink);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.waitlist-button:hover {
+    background-color: var(--neon-green);
+    box-shadow: 0 0 10px var(--neon-green);
+    transform: translateY(-2px);
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.waitlist-button {
+    animation: pulse 2s infinite;
 }
